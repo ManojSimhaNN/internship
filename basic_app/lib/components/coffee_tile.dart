@@ -20,18 +20,26 @@ class _CoffeeTileState extends State<CoffeeTile> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.grey[100],
+        color: Colors.grey[400],
         borderRadius: BorderRadius.circular(10),
       ),
       margin: const EdgeInsets.only(bottom: 10),
       padding: const EdgeInsets.symmetric(
-        vertical: 25,
+        vertical: 20,
         horizontal: 10,
       ),
       child: ListTile(
-        title: Text(widget.coffee.name),
-        subtitle: Text(widget.coffee.price.toString()),
-        leading: Image.asset(widget.coffee.imagePath),
+        title: Text(
+          widget.coffee.name,
+          style: const TextStyle(fontSize: 20),
+        ),
+        subtitle: Text(
+          widget.coffee.price.toString(),
+          style: const TextStyle(fontSize: 15),
+        ),
+        leading: Image.asset(
+          widget.coffee.imagePath,
+        ),
         trailing: IconButton(
           onPressed: widget.onPressed,
           icon: widget.icon,
